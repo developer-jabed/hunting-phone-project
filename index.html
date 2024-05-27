@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Hunting</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="mr-auto">
+    <header>
+      <h4 class="text-4xl text-rose-200 text-center">
+        Mobail <span class="text-pink-400">Hunting</span>
+      </h4>
+    </header>
+    <main class="container mx-auto mt-10">
+      <!-- search -->
+      <div class="bg-gray-100 p-4 m-4 text-black">
+        <input
+          id="search-field"
+          type="text"
+          placeholder="search..."
+          class="input input-bordered w-full max-w-xs"
+        />
+        <button onclick="handleSearch()" class="btn btn-active btn-accent">
+          Search
+        </button>
+
+        <!-- another search field  -->
+        <input
+          type="text"
+          id="search-field2"
+          placeholder="Search.."
+          class="input input-bordered input-primary w-full max-w-xs"
+        />
+        <button onclick="handleSearch2()" class="btn btn-active btn-primary">
+          Primary
+        </button>
+      </div>
+
+      <section>
+        <div id="loading-spinner" class="text-center gap-7 my-40 hidden">
+          <!-- <span class="loading loading-ring loading-md"></span> -->
+          <span class="loading loading-ring loading-lg"></span>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2"
+          id="phone-container"
+        ></div>
+      </section>
+      <div id="show-all-container" class="hidden text-center my-8">
+        <button class="btn bg-pink-400 text-center">
+          Show All
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="5 0 00-6.364 0z"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- show details modal -->
+
+      <!-- Open the modal using ID.showModal() method -->
+<!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="">open modal</button> -->
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 class="font-bold text-lg">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+    </main>
+    <footer></footer>
+    <script src="js/phone.js"></script>
+  </body>
+</html>
